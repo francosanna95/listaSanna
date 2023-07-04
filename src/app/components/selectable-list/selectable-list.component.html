@@ -1,0 +1,6 @@
+<ul>
+    <li  *ngFor="let item of items; let i = index">
+        <span [ngClass]="i%2 ? 'error' : 'success'" (click)="onSelect.emit(item)">{{item | uppercase}}</span>
+        <button (click)="removeItem(i)" class="btn btn-danger" type="button">x</button>
+    </li>
+</ul>

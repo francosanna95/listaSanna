@@ -1,0 +1,13 @@
+<div #titulo>
+    hola mundo
+</div>
+
+
+<form>
+    <input [(ngModel)]="newPokemon.name" placeholder="nombre pokemon" />
+    <button (click)="onSavePokemons()" type="button">Agregar Pokemon</button>
+</form>
+
+<app-selectable-list (onSelect)="onSelectPokemon($event)" [(items)]="pokemons">
+
+</app-selectable-list>
